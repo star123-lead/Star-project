@@ -9,7 +9,7 @@ A premium, high-converting, single-page website built for **Star City Fitness**,
 The website features a bold dark-theme aesthetic, smooth scroll animations, and a responsive mobile-first design to drive gym memberships and inquiries.
 
 ### 🔗 Live Demo
-**[Click here to view the live website](https://gym-wesite-xi.vercel.app/)** *(Note: Replace the link above with your actual Vercel app link once deployed!)*
+**[Click here to view the live website](https://gym-wesite-xi.vercel.app/)**
 
 ---
 
