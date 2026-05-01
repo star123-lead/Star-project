@@ -139,6 +139,13 @@
             animation: logo-glow-float 3.5s ease-in-out infinite;
         }
 
+        /* Hover Glows for Socials */
+        .hover-glow-instagram:hover { box-shadow: 0 0 20px #E1306C; border-color: #E1306C; }
+        .hover-glow-linkedin:hover { box-shadow: 0 0 20px #0A66C2; border-color: #0A66C2; }
+        .hover-glow-github:hover { box-shadow: 0 0 20px #ffffff; border-color: #ffffff; }
+        .hover-glow-reddit:hover { box-shadow: 0 0 20px #FF4500; border-color: #FF4500; }
+        .hover-glow-email:hover { box-shadow: 0 0 20px #FFD700; border-color: #FFD700; }
+
         /* Navbar glass effect */
         .glass-nav {
             background: rgba(10, 10, 10, 0.85);
@@ -148,11 +155,11 @@
 </head>
 <body class="font-poppins antialiased selection:bg-accent selection:text-white">
 
-    <nav class="fixed w-full z-50 glass-nav border-b border-gray-800 transition-all duration-300">
+    <nav id="main-nav" class="fixed w-full z-50 bg-transparent border-b border-transparent transition-all duration-500">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex items-center md:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none transition-colors">
                         <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                         </svg>
@@ -160,15 +167,15 @@
                 </div>
 
                 <div class="hidden md:flex flex-1 justify-center space-x-10">
-                    <a href="#about" class="text-sm font-semibold tracking-wider uppercase text-gray-300 hover:text-white transition-colors">About</a>
-                    <a href="#reviews" class="text-sm font-semibold tracking-wider uppercase text-gray-300 hover:text-white transition-colors">Reviews</a>
-                    <a href="#trainers" class="text-sm font-semibold tracking-wider uppercase text-gray-300 hover:text-white transition-colors">Trainers</a>
-                    <a href="#pricing" class="text-sm font-semibold tracking-wider uppercase text-gray-300 hover:text-white transition-colors">Pricing</a>
-                    <a href="#location" class="text-sm font-semibold tracking-wider uppercase text-gray-300 hover:text-white transition-colors">Location</a>
+                    <a href="#about" class="text-sm font-semibold tracking-wider uppercase text-gray-300 hover:text-white transition-colors drop-shadow-md">About</a>
+                    <a href="#reviews" class="text-sm font-semibold tracking-wider uppercase text-gray-300 hover:text-white transition-colors drop-shadow-md">Reviews</a>
+                    <a href="#trainers" class="text-sm font-semibold tracking-wider uppercase text-gray-300 hover:text-white transition-colors drop-shadow-md">Trainers</a>
+                    <a href="#pricing" class="text-sm font-semibold tracking-wider uppercase text-gray-300 hover:text-white transition-colors drop-shadow-md">Pricing</a>
+                    <a href="#location" class="text-sm font-semibold tracking-wider uppercase text-gray-300 hover:text-white transition-colors drop-shadow-md">Location</a>
                 </div>
 
                 <div class="flex items-center">
-                    <a href="tel:+919342083910" class="bg-brand-gradient text-white font-bold py-2 px-6 rounded-full hover:scale-105 transition-transform duration-300 shadow-[0_0_15px_rgba(255,69,0,0.4)]">
+                    <a id="nav-call-btn" href="tel:+919342083910" class="opacity-0 scale-95 pointer-events-none bg-brand-gradient text-white font-bold py-2 px-6 rounded-full transition-all duration-500 shadow-[0_0_15px_rgba(255,69,0,0.4)]">
                         📞 Call Now
                     </a>
                 </div>
@@ -187,7 +194,7 @@
     </nav>
 
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 z-0 bg-gray-900">
             <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=80" alt="Premium Gym Interior" class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-[#0a0a0a]"></div>
         </div>
@@ -216,13 +223,13 @@
             <p class="font-bebas text-2xl md:text-4xl text-gray-300 tracking-wider mb-6 text-gradient">
                 Ignite Your Potential. Forge Your Legacy.
             </p>
-            <p class="text-gray-400 mb-10 flex items-center justify-center gap-2">
+            <p class="text-gray-400 mb-10 flex items-center justify-center gap-2 drop-shadow-md">
                 <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
                 Near New Bus Stand, Namakkal
             </p>
             
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="tel:+919342083910" class="bg-brand-gradient text-white font-bold py-4 px-10 rounded-full text-lg hover:scale-105 transition-transform duration-300 shadow-[0_0_20px_rgba(255,69,0,0.5)]">
+                <a id="hero-call-btn" href="tel:+919342083910" class="bg-brand-gradient text-white font-bold py-4 px-10 rounded-full text-lg hover:scale-105 transition-all duration-500 shadow-[0_0_20px_rgba(255,69,0,0.5)]">
                     📞 Call Now
                 </a>
                 <a href="#stats" class="btn-bounce bg-transparent border border-gray-500 text-white font-bold py-4 px-10 rounded-full text-lg hover:bg-white/10 hover:border-white transition-all duration-300 flex items-center justify-center gap-2">
@@ -274,27 +281,27 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="overflow-hidden rounded-lg fade-in-section relative group aspect-square">
+                <div class="overflow-hidden rounded-lg fade-in-section relative group aspect-square bg-gray-900">
                     <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80" alt="Dumbbells" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500"></div>
                 </div>
-                <div class="overflow-hidden rounded-lg fade-in-section relative group aspect-square" style="transition-delay: 100ms;">
+                <div class="overflow-hidden rounded-lg fade-in-section relative group aspect-square bg-gray-900" style="transition-delay: 100ms;">
                     <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=800&q=80" alt="Squat Rack" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500"></div>
                 </div>
-                <div class="overflow-hidden rounded-lg fade-in-section relative group aspect-square" style="transition-delay: 200ms;">
+                <div class="overflow-hidden rounded-lg fade-in-section relative group aspect-square bg-gray-900" style="transition-delay: 200ms;">
                     <img src="https://images.unsplash.com/photo-1596357395217-80de13130e92?auto=format&fit=crop&w=800&q=80" alt="Cardio" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500"></div>
                 </div>
-                <div class="overflow-hidden rounded-lg fade-in-section relative group aspect-square">
+                <div class="overflow-hidden rounded-lg fade-in-section relative group aspect-square bg-gray-900">
                     <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80" alt="Functional Training" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500"></div>
                 </div>
-                <div class="overflow-hidden rounded-lg fade-in-section relative group aspect-square" style="transition-delay: 100ms;">
+                <div class="overflow-hidden rounded-lg fade-in-section relative group aspect-square bg-gray-900" style="transition-delay: 100ms;">
                     <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=800&q=80" alt="Action" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500"></div>
                 </div>
-                <div class="overflow-hidden rounded-lg fade-in-section relative group aspect-square" style="transition-delay: 200ms;">
+                <div class="overflow-hidden rounded-lg fade-in-section relative group aspect-square bg-gray-900" style="transition-delay: 200ms;">
                     <img src="https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?auto=format&fit=crop&w=800&q=80" alt="Yoga Mat" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500"></div>
                 </div>
@@ -371,7 +378,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="group relative overflow-hidden rounded-xl fade-in-section bg-card border border-gray-800">
+                <div class="group relative overflow-hidden rounded-xl fade-in-section bg-card border border-gray-800 bg-gray-900">
                     <div class="aspect-[4/5] overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80" alt="Trainer Raja" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100">
                     </div>
@@ -386,7 +393,7 @@
                     </div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-xl fade-in-section bg-card border border-gray-800" style="transition-delay: 150ms;">
+                <div class="group relative overflow-hidden rounded-xl fade-in-section bg-card border border-gray-800 bg-gray-900" style="transition-delay: 150ms;">
                     <div class="aspect-[4/5] overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?auto=format&fit=crop&w=800&q=80" alt="Trainer Anjali" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100">
                     </div>
@@ -401,7 +408,7 @@
                     </div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-xl fade-in-section bg-card border border-gray-800" style="transition-delay: 300ms;">
+                <div class="group relative overflow-hidden rounded-xl fade-in-section bg-card border border-gray-800 bg-gray-900" style="transition-delay: 300ms;">
                     <div class="aspect-[4/5] overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=80" alt="Trainer Kumar" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100">
                     </div>
@@ -438,8 +445,8 @@
                     <a href="tel:+919342083910" class="block w-full py-3 rounded-lg border border-accent text-accent hover:bg-accent hover:text-white transition-colors font-semibold">Choose Plan</a>
                 </div>
 
-                <div class="bg-card border-2 border-accent rounded-2xl p-8 text-center fade-in-section relative transform md:-translate-y-4 hover:-translate-y-6 transition-transform duration-300 shadow-[0_0_30px_rgba(255,69,0,0.2)]">
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-gradient text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-widest">Most Popular</div>
+                <div class="bg-card border-2 border-accent rounded-2xl p-8 md:py-10 text-center fade-in-section relative shadow-[0_0_30px_rgba(255,69,0,0.2)] md:scale-105 hover:-translate-y-2 transition-transform duration-300 z-10">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-gradient text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest whitespace-nowrap shadow-lg">Most Popular</div>
                     <h3 class="text-xl font-bold text-gray-300 mb-2 mt-2">Quarterly</h3>
                     <div class="text-5xl font-bebas text-accent mb-6">₹1,999<span class="text-lg text-gray-500 font-poppins font-normal">/3mo</span></div>
                     <ul class="text-gray-300 text-sm space-y-4 mb-8 text-left">
@@ -517,10 +524,51 @@
 
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600">
                 <p>© 2024 Star City Fitness. All rights reserved.</p>
-                <p class="mt-2 md:mt-0 font-semibold tracking-widest uppercase">Designed & Developed by <span class="text-gray-400 font-bold">Thangamani P</span></p>
+                <p class="mt-2 md:mt-0 font-semibold tracking-widest uppercase">Designed & Developed by <a href="#developer" class="text-gray-400 hover:text-white transition-colors">Thangamani P</a></p>
             </div>
         </div>
     </footer>
+
+    <section id="developer" class="py-20 bg-[#080808] border-t border-gray-900">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <div class="fade-in-section mb-12">
+                <h2 class="font-bebas text-4xl text-gradient mb-3">Want a Website Like This?</h2>
+                <p class="text-gray-400 max-w-xl mx-auto text-sm">I build stunning, high-converting websites for businesses.</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+                <a href="https://www.instagram.com/star.vc_9" target="_blank" class="w-full md:w-auto fade-in-section hover-glow-instagram group flex flex-col items-center bg-card border border-gray-800 rounded-xl p-6 transition-all duration-300">
+                    <svg class="w-8 h-8 mb-3 text-gray-400 group-hover:text-[#E1306C] transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    <div class="text-xs font-bold text-gray-300 uppercase tracking-wider mb-1">Instagram</div>
+                    <div class="text-sm text-gray-500 group-hover:text-white transition-colors">@star.vc_9</div>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/thangamani-p-b694953ba" target="_blank" class="w-full md:w-auto fade-in-section hover-glow-linkedin group flex flex-col items-center bg-card border border-gray-800 rounded-xl p-6 transition-all duration-300" style="transition-delay: 100ms;">
+                    <svg class="w-8 h-8 mb-3 text-gray-400 group-hover:text-[#0A66C2] transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    <div class="text-xs font-bold text-gray-300 uppercase tracking-wider mb-1">LinkedIn</div>
+                    <div class="text-sm text-gray-500 group-hover:text-white transition-colors">Thangamani P</div>
+                </a>
+
+                <a href="https://github.com/star123-lead" target="_blank" class="w-full md:w-auto fade-in-section hover-glow-github group flex flex-col items-center bg-card border border-gray-800 rounded-xl p-6 transition-all duration-300" style="transition-delay: 200ms;">
+                    <svg class="w-8 h-8 mb-3 text-gray-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    <div class="text-xs font-bold text-gray-300 uppercase tracking-wider mb-1">GitHub</div>
+                    <div class="text-sm text-gray-500 group-hover:text-white transition-colors">@star123-lead</div>
+                </a>
+
+                <a href="https://www.reddit.com/u/star-lead/s/pYn5VT5N89" target="_blank" class="w-full md:w-auto fade-in-section hover-glow-reddit group flex flex-col items-center bg-card border border-gray-800 rounded-xl p-6 transition-all duration-300" style="transition-delay: 300ms;">
+                    <svg class="w-8 h-8 mb-3 text-gray-400 group-hover:text-[#FF4500] transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M24 11.5c0-1.65-1.35-3-3-3-.96 0-1.86.48-2.42 1.24-1.64-1-3.75-1.64-6.07-1.72.08-1.1.4-3.05 1.52-3.7.72-.4 1.73-.24 3 .5C17.2 6.3 18.46 7.5 20 7.5c1.65 0 3-1.35 3-3s-1.35-3-3-3c-1.38 0-2.54.94-2.88 2.22-1.43-.72-2.64-.8-3.6-.25-1.64.94-1.95 3.47-2 4.55-2.33.08-4.45.7-6.1 1.72C4.86 8.98 3.96 8.5 3 8.5c-1.65 0-3 1.35-3 3 0 1.32.84 2.44 2.05 2.84-.03.22-.05.44-.05.66 0 3.86 4.5 7 10 7s10-3.14 10-7c0-.22-.02-.44-.05-.66 1.2-.4 2.05-1.54 2.05-2.84zM2.3 13.37C1.5 13.07 1 12.35 1 11.5c0-1.1.9-2 2-2 .64 0 1.22.32 1.6.82-1.1.85-1.92 1.9-2.3 3.05zm3.7.13c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9.8 4.8c-1.08.63-2.42.96-3.8.96-1.4 0-2.74-.34-3.8-.95-.24-.13-.32-.44-.2-.68.15-.24.46-.32.7-.18 1.83 1.06 4.76 1.06 6.6 0 .23-.13.53-.05.67.18.14.23.06.54-.18.67zm.2-2.8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm5.7-2.13c-.38-1.16-1.2-2.2-2.3-3.05.38-.5.96-.82 1.6-.82 1.1 0 2 .9 2 2 0 .84-.53 1.57-1.3 1.87z"/></svg>
+                    <div class="text-xs font-bold text-gray-300 uppercase tracking-wider mb-1">Reddit</div>
+                    <div class="text-sm text-gray-500 group-hover:text-white transition-colors">u/star-lead</div>
+                </a>
+
+                <a href="mailto:ptm9541@gmail.com" class="w-full md:w-auto fade-in-section hover-glow-email group flex flex-col items-center bg-card border border-gray-800 rounded-xl p-6 transition-all duration-300" style="transition-delay: 400ms;">
+                    <svg class="w-8 h-8 mb-3 text-gray-400 group-hover:text-accent transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <div class="text-xs font-bold text-gray-300 uppercase tracking-wider mb-1">Email</div>
+                    <div class="text-sm text-gray-500 group-hover:text-white transition-colors">ptm9541@gmail.com</div>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <a href="https://wa.me/919342083910" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full whatsapp-btn shadow-lg hover:bg-[#20bd5a] transition-colors">
         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -529,6 +577,35 @@
     </a>
 
     <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('main-nav');
+        const navCallBtn = document.getElementById('nav-call-btn');
+        const heroCallBtn = document.getElementById('hero-call-btn');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                // Scrolled down: show background and nav call button
+                navbar.classList.add('glass-nav', 'border-gray-800');
+                navbar.classList.remove('bg-transparent', 'border-transparent');
+                
+                navCallBtn.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+                navCallBtn.classList.add('opacity-100', 'scale-100');
+
+                // Hide big hero button
+                heroCallBtn.classList.add('opacity-0', 'pointer-events-none');
+            } else {
+                // At top: transparent, hide nav call button
+                navbar.classList.add('bg-transparent', 'border-transparent');
+                navbar.classList.remove('glass-nav', 'border-gray-800');
+                
+                navCallBtn.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+                navCallBtn.classList.remove('opacity-100', 'scale-100');
+
+                // Show big hero button
+                heroCallBtn.classList.remove('opacity-0', 'pointer-events-none');
+            }
+        });
+
         // Mobile Menu Toggle
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
@@ -554,8 +631,6 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('is-visible');
-                    // Optional: stop observing once visible
-                    // observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
@@ -601,7 +676,6 @@
         // Split text into span words
         quoteText.split(' ').forEach((word, index) => {
             const span = document.createElement('span');
-            // Using   ensures spaces render correctly between inline blocks
             span.innerHTML = word + ' '; 
             span.className = 'word';
             span.style.transitionDelay = `${index * 100}ms`;
